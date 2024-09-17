@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: lightgray;
+}
+.container{
+    width: 50%;
+    margin: .5em auto;
+    background-color: white;
+    border-radius: 1em;
+    padding: .5em;
+}
+.select{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+input[type="color"],select,button{
+    border: 2px solid rgb(185, 184, 184);
+}
+input[type="color"]{
+    border: none;
+    width: 62px;
+	height: 42px;
+    padding: 0;
+}
+select{
+    width: 50%;
+    font-weight: 700;
+}
+button{
+    width: 35%;
+    background-color: white;
+    font-weight: 700;
+}
+button:hover{
+    background-color: aliceblue;
+    border: 2px solid gray;
+}
+
+.schemes{
+    margin-top: 1.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 70vh;
+}
+.scheme{
+    width: 20%;
+    background-color: rgb(172, 99, 4);
+   
+}
+.hex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .7em;
+}
+#snackbar {
+    visibility: hidden;
+    position: fixed;
+    font-weight: bold;
+    font-size: 0.75rem;
+    background-color: #ccc;
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    color: #070707;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 6em;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein ease-out 0.5s, fadeout ease-out 0.5s 2.5s;
+}
+@media (max-width: 900px) {
+    .select{
+        flex-direction: column;
+    }
+    select{
+        width: 100%;
+        margin-top: 9px;
+    }
+    input[type="color"]{
+        width: 100%;
+        height: 42px;
+        padding: 0;
+    }
+    button{
+        width: 100%;
+        margin-top: 9px;
+    }
+    .hex{
+        font-size: .6em;
+    }
+    .schemes{
+        margin-top: .8em;
+        height: 60vh;
+    }
+    .container{
+        width: 60%;
+        padding: .4em;
+    }
+}
